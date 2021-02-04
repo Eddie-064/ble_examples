@@ -119,8 +119,13 @@ Display_Handle DisplayUart_open(Display_Handle hDisplay,
 
     UART_Params uartParams;
     UART_Params_init(&uartParams);
-    uartParams.baudRate  = hwAttrs->baudRate;
-    uartParams.writeMode = UART_MODE_BLOCKING;
+    /*uartParams.baudRate  = hwAttrs->baudRate;
+    uartParams.writeMode = UART_MODE_BLOCKING;*/
+    uartParams.writeDataMode = UART_DATA_BINARY;
+    uartParams.readDataMode = UART_DATA_BINARY;
+    uartParams.readReturnMode = UART_RETURN_FULL;
+    uartParams.readEcho = UART_ECHO_OFF;
+    uartParams.baudRate = 9600;
 
     Semaphore_Params semParams;
     Semaphore_Params_init(&semParams);

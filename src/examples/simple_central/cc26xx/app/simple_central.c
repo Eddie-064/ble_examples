@@ -760,10 +760,10 @@ static void SimpleBLECentral_processRoleEvent(gapCentralRoleEvent_t *pEvent)
       {
     	  //Find peer device address by UUID
 
-		if ( (DEFAULT_DEV_DISC_BY_SVC_UUID == FALSE) ||
+		/*if ( (DEFAULT_DEV_DISC_BY_SVC_UUID == FALSE) ||
 			SimpleBLECentral_findSvcUuid(SIMPLEPROFILE_SERV_UUID,
                                          pEvent->deviceInfo.pEvtData,
-                                         pEvent->deviceInfo.dataLen))
+                                         pEvent->deviceInfo.dataLen))*/
 		{
 			SimpleBLECentral_addDeviceInfo(pEvent->deviceInfo.addr,
                                            pEvent->deviceInfo.addrType);
