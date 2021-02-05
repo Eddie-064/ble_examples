@@ -1,3 +1,8 @@
+[project files](examples/cc2650lp/)
+
+    - replace ble SDK and TI-RTOS version with current version
+    ex: C:\ti\simplelink\ble_sdk_2_02_01_18 => C:\ti\simplelink\ble_sdk_2_02_05_02
+
 Extra examples for TI BLE-Stack 2.2.x SDK
 =========================================
 
