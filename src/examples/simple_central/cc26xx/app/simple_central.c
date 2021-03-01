@@ -1225,6 +1225,9 @@ static void SimpleBLECentral_processGATTMsg(gattMsgEvent_t *pMsg)
 		{
 			// MTU size updated
 			Display_print1(dispHandle, ROW_THREE, 0, "MTU Size: %d", pMsg->msg.mtuEvt.MTU);
+		}else if (pMsg->method == ATT_HANDLE_VALUE_NOTI)
+		{
+			Display_print1(dispHandle, ROW_SIX, 0, "Notified rsp: %d", pMsg->msg.handleValueNoti.pValue[0]);
 		}
 		else if (discState != BLE_DISC_STATE_IDLE)
 		{
